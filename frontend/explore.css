@@ -1,0 +1,36 @@
+.explore-tab {
+    background-color: rgb(60, 60, 100);
+}
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    column-gap: 10px;
+    row-gap: 50px;
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.exercise-item {
+    display: flex;
+    height: 300px;
+}
+
+.exercise-item img {
+    border-radius: 10px;
+}
+
+.exercise-text {
+    margin-left: 35px;
+}
+
+.exercise-name {
+    color: white;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.exercise-description {
+    color: white;
+}
