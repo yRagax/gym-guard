@@ -1,1 +1,5 @@
-com/gymguard/GymguardApplication.class
+com/gymguard/GymGuardApplication.class
+com/gymguard/ExerciseRepository.class
+com/gymguard/WebConfig.class
+com/gymguard/Exercise.class
+com/gymguard/ExerciseController.class
