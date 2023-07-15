@@ -2,6 +2,23 @@
     background-color: rgb(60, 60, 100);
 }
 
+input {
+    height: 50px;
+    width: 250px;
+
+    background-color: rgb(60, 60, 100);
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 20px;
+
+    border-radius: 5px;
+
+    border: none;
+    margin-left: 50px;
+    margin-top: 30px;
+    padding-left: 15px;
+}
+
 .exercise-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
