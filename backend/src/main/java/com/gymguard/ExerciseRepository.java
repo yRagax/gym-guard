@@ -16,4 +16,9 @@ public class ExerciseRepository {
     public List<Exercise> getAll() {
         return jdbcTemplate.query("SELECT * FROM exercise", BeanPropertyRowMapper.newInstance(Exercise.class));
     }
+
+    public List<Exercise> getByFilter(String filter) {
+        return jdbcTemplate.query("SELECT * FROM exercise WHERE name LIKE CONCAT('%', ?, '%')", BeanPropertyRowMapper.newInstance(Exercise.class), filter);
+
+    }
 }
