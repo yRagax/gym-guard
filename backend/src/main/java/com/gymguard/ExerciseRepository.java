@@ -21,4 +21,8 @@ public class ExerciseRepository {
         return jdbcTemplate.query("SELECT * FROM exercise WHERE name LIKE CONCAT('%', ?, '%')", BeanPropertyRowMapper.newInstance(Exercise.class), filter);
 
     }
+
+    public Exercise getById(int id) {
+        return jdbcTemplate.queryForObject("SELECT * FROM exercise WHERE id=? LIMIT 1", BeanPropertyRowMapper.newInstance(Exercise.class), id);
+    }
 }
