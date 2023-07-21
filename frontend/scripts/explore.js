@@ -3,7 +3,6 @@ requestExercises('');
 document.querySelector('input')
     .addEventListener('input', event => {
         requestExercises(event.target.value);
-        console.log(event.target.value);
     });
 
 function requestExercises(filter) {
