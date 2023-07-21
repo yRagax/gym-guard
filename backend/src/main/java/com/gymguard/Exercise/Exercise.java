@@ -1,17 +1,15 @@
-package com.gymguard;
+package com.gymguard.Exercise;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Template {
+public class Exercise {
     private int id;
     private String name;
-    private List<String> exerciseNameList;
-    private List<Integer> setsList;
+    private String muscleGroup;
+    private String type;
 }
