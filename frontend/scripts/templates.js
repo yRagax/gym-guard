@@ -11,10 +11,10 @@ fetch(url, {
         data.forEach(template => {
             insideGridHTML += `
                 <div class="template-item">
-                    <p class="template-name">Template Name</p>`;
-            for(const exercise of template.exercises) {
+                    <p class="template-name">${template.name}</p>`;
+            for(let i=0;i<template.exerciseNameList.length;i++) {
                 insideGridHTML += `
-                    <p class="template-exercise">${exercise.sets} x ${exercise.name}
+                    <p class="template-exercise">${template.exerciseNameList[i]} x ${template.setsList[i]}
                         </p>`;
             }
             insideGridHTML +=`<button>Start template</button></div>`;
