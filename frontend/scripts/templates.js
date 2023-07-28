@@ -19,6 +19,7 @@ fetch(url, {
             }
             insideGridHTML +=`<button>Start template</button></div>`;
         });
-        document.querySelector('.templates-grid').innerHTML = insideGridHTML;
+        document.querySelector('.templates-grid').innerHTML =
+            insideGridHTML + document.querySelector('.templates-grid').innerHTML;
     })
     .catch(error => console.error('Error:', error));

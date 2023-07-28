@@ -1,8 +1,8 @@
-/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/ExerciseController.java
-/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Exercise.java
-/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/ExerciseRepository.java
-/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/TemplateController.java
-/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/WebConfig.java
-/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Template.java
-/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/TemplateRepository.java
+/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Config/WebConfig.java
+/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Exercise/ExerciseController.java
+/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Exercise/ExerciseRepository.java
+/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Template/Template.java
+/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Exercise/Exercise.java
+/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Template/TemplateRepository.java
+/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Template/TemplateController.java
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/GymGuardApplication.java
