@@ -1,0 +1,11 @@
+.exercise-tab {
+    background-color: rgb(60, 60, 100);
+}
+
+.no-workout-text {
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 50px;
+}

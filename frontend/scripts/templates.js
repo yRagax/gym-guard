@@ -17,7 +17,13 @@ fetch(url, {
                     <p class="template-exercise">${template.exerciseNameList[i]} x ${template.setsList[i]}
                         </p>`;
             }
-            insideGridHTML +=`<button>Start template</button></div>`;
+            insideGridHTML +=`
+                <button onclick="
+                    localStorage.setItem('isWorkoutStarted', 'true');
+                    localStorage.setItem('workoutIndex', ${template.id});
+                    window.location.href=\`exercise.html\`;">
+                    Start template
+                </button></div>`;
         });
         document.querySelector('.templates-grid').innerHTML =
             insideGridHTML + document.querySelector('.templates-grid').innerHTML;
