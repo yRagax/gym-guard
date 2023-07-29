@@ -1,9 +1,15 @@
-if(localStorage.getItem('isWorkoutStarted') === 'false') {
-    document.querySelector('.main-content').innerHTML = `
-        <p class="no-workout-text">No exercise started. Go to templates tab and start one!</p>`;
+function finishWorkout() {
+    localStorage.setItem('isWorkoutStarted', false);
+    localStorage.setItem('workoutIndex', -1);
+    window.location.href=`history.html`;
 }
 
-if(localStorage.getItem('isWorkoutStarted') === 'true') {
+if(localStorage.getItem('isWorkoutStarted') === 'false') {
+    document.querySelector('.main-content').innerHTML = `
+        <p class="no-workout-text">No workout started. Go to templates tab and start one!</p>`;
+}
+
+else if(localStorage.getItem('isWorkoutStarted') === 'true') {
     const url = `http://localhost:8080/templates/${localStorage.getItem('workoutIndex')}`;
     fetch(url, {
         method: 'GET',
@@ -13,19 +19,30 @@ if(localStorage.getItem('isWorkoutStarted') === 'true') {
     })
         .then(response => response.json())
         .then(data => {
-            /*let insideGridHTML = '';
-            data.forEach(exercise => {
-                insideGridHTML += `
-                <div class="exercise-item">
-                    <img src="images/${exercise.name.toLowerCase().replace(/ /g, '_')}.jpg">
-                    <div class="exercise-text">
-                        <p class="exercise-name">${exercise.name}</p>
-                        <p class="exercise-description">Primary group: ${exercise.muscleGroup}</p>
-                        <p class="exercise-description">Type: ${exercise.type.charAt(0).toUpperCase()+exercise.type.slice(1)}</p>
-                    </div>
-                </div>`;
-            });
-            document.querySelector('.exercise-grid').innerHTML = insideGridHTML;*/
+            let mainContentHTML = `
+                <h1>${data.name}</h1>`;
+            for(let i=0;i<data.exerciseNameList.length;i++) {
+                mainContentHTML += `
+                    <div class="exercise-item">
+                        <p class="exercise-name">${data.exerciseNameList[i]}</p>
+                        <div class="exercise-item-bottom">`;
+
+                for(let j=0;j<data.setsList[i];j++) {
+                    mainContentHTML += `
+                        <div class="set-row">
+                            <input type="checkbox">
+                            <input placeholder="weight (kg)">
+                            <input placeholder="reps">
+                        </div>`;
+                }
+
+                mainContentHTML += `
+                        </div>
+                    </div>`;
+            }
+
+            document.querySelector('.main-content').innerHTML =
+                mainContentHTML + document.querySelector('.main-content').innerHTML;
         })
         .catch(error => console.error('Error:', error));
 }
