@@ -11,7 +11,7 @@ fetch(url, {
         data.forEach(workout => {
            mainContentHTML += `
                <div class="workout-item">
-                    <p class="workout-name">${workout.id}</p>
+                    <p class="workout-name">${workout.name}</p>
                     <div class="workout-info">
                         <div class="info-type">
                             <p>Date:</p>

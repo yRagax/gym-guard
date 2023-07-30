@@ -8,5 +8,6 @@ if(localStorage.getItem('workoutIndex') === null) {
 
 if(localStorage.getItem('isWorkoutStarted') === 'true' &&
     !window.location.href.endsWith('exercise.html')) {
-    document.querySelector('header').children[0].setAttribute('style', 'background-color: lightblue;');
+    document.querySelector('header').children[0].setAttribute('style',
+        'background-color: lightblue; color: rgb(80, 80, 80);');
 }

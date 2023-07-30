@@ -13,18 +13,18 @@ import java.util.List;
 public class WorkoutRepository{
 
     @Autowired
-    JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
-    public List<Workout> getAll() {
-        return jdbcTemplate.query("SELECT * FROM workout", BeanPropertyRowMapper.newInstance(Workout.class));
+    public List<WorkoutEntity> getAll() {
+        return jdbcTemplate.query("SELECT * FROM workout", BeanPropertyRowMapper.newInstance(WorkoutEntity.class));
     }
 
-    public Workout getById(int id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM workout WHERE id=? LIMIT 1", BeanPropertyRowMapper.newInstance(Workout.class), id);
+    public WorkoutEntity getById(int id) {
+        return jdbcTemplate.queryForObject("SELECT * FROM workout WHERE id=? LIMIT 1", BeanPropertyRowMapper.newInstance(WorkoutEntity.class), id);
     }
 
-    public int save(Workout workout) {
+    public int save(WorkoutEntity workoutEntity) {
         return jdbcTemplate.update("INSERT INTO workout(template_id, `date`, volume) VALUES(?, ?, ?)",
-                workout.getTemplateId(), new Timestamp(new Date().getTime()), workout.getVolume());
+                workoutEntity.getTemplateId(), new Timestamp(new Date().getTime()), workoutEntity.getVolume());
     }
 }

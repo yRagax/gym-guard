@@ -9,8 +9,9 @@ import java.sql.Timestamp;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Workout {
-    private String name;
+public class WorkoutEntity {
+    private int id;
+    private int templateId;
     private Timestamp date;
     private int volume;
 }

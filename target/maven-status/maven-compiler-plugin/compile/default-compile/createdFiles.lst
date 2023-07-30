@@ -1,9 +1,11 @@
 com/gymguard/Exercise/ExerciseRepository.class
 com/gymguard/Template/TemplateHead.class
 com/gymguard/Template/TemplateBody.class
+com/gymguard/Workout/WorkoutEntity.class
 com/gymguard/Exercise/Exercise.class
 com/gymguard/Workout/WorkoutController.class
 com/gymguard/Template/TemplateMapper.class
+com/gymguard/Workout/WorkoutMapper.class
 com/gymguard/Workout/WorkoutRepository.class
 com/gymguard/Workout/Workout.class
 com/gymguard/GymGuardApplication.class

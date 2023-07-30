@@ -1,6 +1,7 @@
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Workout/WorkoutController.java
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Template/Template.java
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Workout/Workout.java
+/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Workout/WorkoutEntity.java
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Template/TemplateController.java
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/GymGuardApplication.java
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Template/TemplateService.java
@@ -13,3 +14,4 @@
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Template/TemplateRepository.java
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Workout/WorkoutRepository.java
 /home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Template/TemplateMapper.java
+/home/ragax/IdeaProjects/gymguard/backend/src/main/java/com/gymguard/Workout/WorkoutMapper.java
