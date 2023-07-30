@@ -1,7 +1,38 @@
+function calculateVolume() {
+    let volume = 0;
+    document.querySelectorAll('.set-row').forEach(row => {
+        let checkbox = row.children[0];
+        let weight = row.children[1];
+        let reps = row.children[2];
+        if(!Number.isInteger(parseInt(weight.value)) || !Number.isInteger(parseInt(reps.value))) return;
+        volume += checkbox.checked ? weight.value * reps.value : 0;
+    });
+    return volume;
+}
+
 function finishWorkout() {
-    localStorage.setItem('isWorkoutStarted', false);
-    localStorage.setItem('workoutIndex', -1);
-    window.location.href=`history.html`;
+    const workout = {
+        'id': -1,
+        'templateId': localStorage.getItem('workoutIndex'),
+        'timestamp': null,
+        'volume': calculateVolume()
+    };
+
+    const url = 'http://localhost:8080/workouts';
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(workout)
+    })
+        .then(response => response.json())
+        .then(data => {
+            localStorage.setItem('isWorkoutStarted', false);
+            localStorage.setItem('workoutIndex', -1);
+            window.location.href=`history.html`;
+        })
+        .catch(error => console.error('Error:', error));
 }
 
 if(localStorage.getItem('isWorkoutStarted') === 'false') {
