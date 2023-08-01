@@ -23,38 +23,38 @@
     font-weight: 700;
 }
 
-.toggle-left {
+.toggle-right, .toggle-left {
     display: inline-block;
     padding: 10px;
-    background-color: rgb(40, 40, 80);
-    color: aquamarine;
+}
 
+.toggle-left:hover, .toggle-right:hover {
     border-bottom: rgb(101, 101, 147) 2px solid;
     border-left: rgb(101, 101, 147) 2px solid;
     border-top: rgb(36, 36, 93) 2px solid;
     border-right: rgb(36, 36, 93) 2px solid;
+
+    background-color: rgb(40, 40, 80);
 }
 
-.toggle-right {
-    display: inline-block;
-    padding: 10px;
-    background-color: rgb(60, 60, 100);
+.toggle-left:active, .toggle-right:active {
+    color: aquamarine;
+}
 
+.T-unpressed {
+    background-color: rgb(60, 60, 100);
     border-bottom: rgb(36, 36, 93) 2px solid;
     border-left: rgb(36, 36, 93) 2px solid;
     border-top: rgb(101, 101, 147) 2px solid;
     border-right: rgb(101, 101, 147) 2px solid;
+    color: white;
 }
 
-.toggle-right:hover {
+.T-pressed {
+    background-color: rgb(40, 40, 80);
     border-bottom: rgb(101, 101, 147) 2px solid;
     border-left: rgb(101, 101, 147) 2px solid;
     border-top: rgb(36, 36, 93) 2px solid;
     border-right: rgb(36, 36, 93) 2px solid;
-
-    background-color: rgb(40, 40, 80);
-}
-
-.toggle-right:active {
     color: aquamarine;
 }

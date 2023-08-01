@@ -6,6 +6,10 @@ if(localStorage.getItem('workoutIndex') === null) {
     localStorage.setItem('workoutIndex', -1);
 }
 
+if(localStorage.getItem('weightUnit') === null) {
+    getWeightUnit();
+}
+
 if(localStorage.getItem('isWorkoutStarted') === 'true' &&
     !window.location.href.endsWith('exercise.html')) {
     document.querySelector('header').children[0].setAttribute('style',
