@@ -21,7 +21,7 @@ fetch(url, {
                         <div class="info-content">
                             <p>${new Date(workout.date).toLocaleDateString()}</p>
                             <p>${new Date(workout.date).toLocaleTimeString()}</p>
-                            <p>${workout.volume} kg</p>
+                            <p>${workout.volume} ${localStorage.getItem('weightUnit')}</p>
                         </div>
                     </div>
                 </div>`;

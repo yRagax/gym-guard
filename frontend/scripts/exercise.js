@@ -62,8 +62,8 @@ else if(localStorage.getItem('isWorkoutStarted') === 'true') {
                     mainContentHTML += `
                         <div class="set-row">
                             <input type="checkbox">
-                            <input placeholder="weight (kg)">
-                            <input placeholder="reps">
+                            <input class="weight-input" placeholder="weight (${localStorage.getItem('weightUnit')})">
+                            <input class="reps-input" placeholder="reps">
                         </div>`;
                 }
 

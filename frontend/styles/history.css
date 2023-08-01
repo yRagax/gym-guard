@@ -16,6 +16,7 @@
 .workout-item {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 20px;
 
     display: flex;
     flex-direction: column;

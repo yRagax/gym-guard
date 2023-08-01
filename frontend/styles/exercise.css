@@ -64,7 +64,7 @@ input[type="checkbox"] {
     border: none;
 }
 
-input[placeholder='weight (kg)'], input[placeholder='reps'] {
+.weight-input, .reps-input {
     display: flex;
     font-size: 25px;
 }
