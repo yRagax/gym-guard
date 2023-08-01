@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.io.Console;
 import java.util.List;
 
 @Repository
@@ -19,5 +20,9 @@ public class SettingRepository {
 
     public Setting getById(int id) {
         return jdbcTemplate.queryForObject("SELECT * FROM setting WHERE id=? LIMIT 1", BeanPropertyRowMapper.newInstance(Setting.class), id);
+    }
+
+    public int update(Setting setting) {
+        return jdbcTemplate.update("UPDATE setting SET value=? WHERE id=?", setting.getValue(), setting.getId());
     }
 }
